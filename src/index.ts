@@ -2,8 +2,44 @@ import Validator from "./classes/Validator";
 
 const validator = new Validator;
 
-const testString = "12+4*5/2";
+let testString = "12+4*5/2";
 
-const testResult = validator.Validate(testString);
+let testResult = validator.Validate(testString);
+
+console.log(`Result for "${testString}": ${testResult}`);
+
+testString = "12++4*5/2";
+
+testResult = validator.Validate(testString);
+
+console.log(`Result for "${testString}": ${testResult}`);
+
+testString = "12+(4*5/2)";
+
+testResult = validator.Validate(testString);
+
+console.log(`Result for "${testString}": ${testResult}`);
+
+testString = "12+(4*5/2+)";
+
+testResult = validator.Validate(testString);
+
+console.log(`Result for "${testString}": ${testResult}`);
+
+testString = "12+(4*5/2)+";
+
+testResult = validator.Validate(testString);
+
+console.log(`Result for "${testString}": ${testResult}`);
+
+testString = "12+4*5/2+";
+
+testResult = validator.Validate(testString);
+
+console.log(`Result for "${testString}": ${testResult}`);
+
+testString = "12+(4*(5/2))";
+
+testResult = validator.Validate(testString);
 
 console.log(`Result for "${testString}": ${testResult}`);
